@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             // Action buttons column
             const actionCell = document.createElement('td');
+            actionCell.setAttribute('class','actions-container');
             
             // Edit Button
             const editBtn = document.createElementNS("http://www.w3.org/2000/svg", "svg");
