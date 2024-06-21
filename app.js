@@ -146,8 +146,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const newEventStartDate = newRow.querySelector('#newEventStartDate').value;
             const newEventEndDate = newRow.querySelector('#newEventEndDate').value;
 
-            if(newEventName == "" || newEventStartDate== "" || newEventEndDate=="") {
-                alert("Please fill all fields");
+            if (newEventName.trim() === '' || newEventStartDate === '' || newEventEndDate === '') {
+                alert('Please fill in all fields.');
                 return;
             }
 
@@ -240,14 +240,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Handle saving edited event
     eventList.addEventListener('click', async (e) => {
         if (e.target.closest('.save-edit-btn')) {
-            const eventId = e.target.closest('.save-edit-btn').getAttribute('data-id');
             const row = e.target.closest('tr');
+            const eventId = e.target.closest('.save-edit-btn').getAttribute('data-id');
             const editedEvent = {
                 name: row.querySelector('.edit-event-name').value,
                 startDate: row.querySelector('.edit-event-start').value,
                 endDate: row.querySelector('.edit-event-end').value,
             };
-
+    
+            // Check if any field is blank
+            if (editedEvent.name.trim() === '' || editedEvent.startDate === '' || editedEvent.endDate === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+    
+            // Proceed with API call if all fields are filled
             await fetch(`http://localhost:3000/events/${eventId}`, {
                 method: 'PUT',
                 headers: {
@@ -255,10 +262,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 },
                 body: JSON.stringify(editedEvent),
             });
-
-            fetchEvents();
+    
+            fetchEvents(); // Refresh the event list
         }
     });
+    
 
     // Handle canceling edited event
     eventList.addEventListener('click', (e) => {
