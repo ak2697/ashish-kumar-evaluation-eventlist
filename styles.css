@@ -1,0 +1,152 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.button-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.add-btn {
+    background-color: #008cba;
+    color: white;
+}
+
+
+.table-container{
+    
+  border: 4px solid #ccc;
+  border-radius: 10px;
+  padding : 20px;
+}
+
+table {
+    width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; 
+    
+}
+
+th, td {
+    text-align: center;
+    
+}
+
+th {
+    
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    font-size: 30px;
+}
+
+td {
+    
+    padding: 10px;
+    margin: 20px;
+    background-color: #dddcda;
+}
+
+td input {
+    margin-top: 20px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.svg-container-edit {
+    width: 10px; 
+    height: 10px; 
+    cursor: pointer;
+  }
+  
+  .svg-icon-edit {
+    width: 25px; 
+    height: 25px; 
+    fill: white; 
+    background-color: #0056b3;
+    border-radius: 20%;
+   
+  }
+  
+  .svg-icon-edit:hover {
+    background-color: blue; 
+  }
+  
+
+
+  .svg-container-cancel {
+    width: 10px; 
+    height: 10px; 
+    cursor: pointer;
+  }
+  
+  .svg-icon-cancel {
+    width: 25px; 
+    height: 25px; 
+    fill: white; 
+    background-color: #c94c4c;
+    border-radius: 20%;
+   
+  }
+  
+  .svg-icon-cancel:hover {
+    background-color: red; 
+  }
+  
+
+
+  .svg-container-delete {
+    width: 10px; 
+    height: 10px; 
+    
+    cursor: pointer;
+  }
+  
+  .svg-icon-delete {
+    width: 25px; 
+    height: 25px; 
+    fill: white; 
+    background-color: #c94c4c;
+    border-radius: 20%;
+   
+  }
+  
+  .svg-icon-delete:hover {
+    background-color: red; 
+  }
+  
+
+   .actions-container{
+    display: flex;
+    gap: 10px;
+}
+
+
+.svg-icon-save {
+    width: 25px; 
+    height: 25px; 
+    fill: white; 
+    background-color: #0056b3;
+    border-radius: 20%;
+   
+  }
+  
+  .svg-icon-save:hover {
+    background-color: blue; 
+  }
+  
